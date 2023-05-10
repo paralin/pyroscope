@@ -45,5 +45,5 @@ This is a fork of the [commit just before] the license was changed to AGPL.
 These are the client versions corresponding to this fork:
 
  - [pyroscope-golang]: v0.7.0
- 
+
  [pyroscope-golang]: https://github.com/paralin/pyroscope-golang
