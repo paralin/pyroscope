@@ -39,3 +39,11 @@ Grafana Labs has acquired Pyroscope and re-licensed it from Apache-2.0 to AGPL-3
 This is a fork of the [commit just before] the license was changed to AGPL.
 
 [commit just before]: https://github.com/grafana/pyroscope/commit/bd6225e4437c6de4c2ffb24d8fda0a84dc945fc1
+
+### Corresponding client versions
+
+These are the client versions corresponding to this fork:
+
+ - [pyroscope-golang]: v0.7.0
+ 
+ [pyroscope-golang]: https://github.com/paralin/pyroscope-golang
