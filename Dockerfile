@@ -7,7 +7,7 @@
 # | |         | |       | |     __/ |
 # |_|         |_|       |_|    |___/
 
-FROM php:7.4-fpm-alpine3.16 as phpspy-builder
+FROM php:8.2-fpm-alpine3.16 as phpspy-builder
 RUN apk update && apk upgrade \
     && apk add --update alpine-sdk
 COPY Makefile Makefile
@@ -21,7 +21,7 @@ RUN make build-phpspy-dependencies
 # | (_| \__ \__ \  __/ |_\__ \
 #  \__,_|___/___/\___|\__|___/
 
-FROM node:16.18-alpine3.16 as js-builder
+FROM node:20.2-alpine3.16 as js-builder
 
 RUN apk update && apk upgrade && \
     apk add --no-cache make
@@ -52,7 +52,7 @@ RUN EXTRA_METADATA=$EXTRA_METADATA make assets-release
 #  \___|_.__/| .__/|_|
 #            | |
 #            |_|
-FROM alpine:3.16 as ebpf-builder
+FROM alpine:3.18 as ebpf-builder
 RUN apk update && apk upgrade && \
     apk add cmake make binutils gcc g++ clang musl-dev linux-headers zlib-dev elfutils-dev libelf-static zlib-static git openssh
 ADD third_party/libbpf/Makefile /build/libbpf/
@@ -72,7 +72,7 @@ RUN CFLAGS=-I/build/libbpf/lib/include make -C /build/profile.bpf
 #  |___/                     |___/
 
 
-FROM golang:1.19-alpine3.16 AS go-builder
+FROM golang:1.20-alpine3.16 AS go-builder
 
 RUN apk update && apk upgrade && \
     apk add --no-cache make git zstd gcc g++ libc-dev musl-dev bash zlib-dev elfutils-dev libelf-static zlib-static \
@@ -115,7 +115,7 @@ RUN ENABLED_SPIES_RELEASE="ebpfspy,phpspy,dotnetspy" \
 #                                           __/ |
 #                                          |___/
 
-FROM alpine:3.16
+FROM alpine:3.18
 
 LABEL maintainer="Pyroscope team <hello@pyroscope.io>"
 

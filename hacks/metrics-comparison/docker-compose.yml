@@ -31,7 +31,7 @@ services:
           memory: 2048MB
 
   grafana:
-    image: grafana/grafana:8.1.1
+    image: grafana/grafana:10.0.2
     volumes:
       - ./grafana-provisioning:/etc/grafana/provisioning
       - ./grafana/grafana.ini:/etc/grafana/grafana.ini
