@@ -25,19 +25,19 @@ jobs:
     needs: check
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-      - uses: actions/setup-go@v2
+        uses: actions/checkout@v3
+      - uses: actions/setup-go@v4
         with:
           go-version: '^1.18.0'
       - name: Cache go mod directories
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/go/pkg/mod
           key: go-${{ hashFiles('**/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-go-
       - name: Install go-task
-        uses: jaxxstorm/action-install-gh-release@v1.5.0
+        uses: jaxxstorm/action-install-gh-release@v1.10.0
         with:
           repo: pyroscope-io/ci
           tag: latest
@@ -62,15 +62,15 @@ jobs:
     needs: check
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+        uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: '16.18'
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
 
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
@@ -78,7 +78,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn
       - name: Install go-task
-        uses: jaxxstorm/action-install-gh-release@v1.5.0
+        uses: jaxxstorm/action-install-gh-release@v1.10.0
         with:
           repo: pyroscope-io/ci
           tag: latest

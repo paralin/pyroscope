@@ -4,80 +4,80 @@ go 1.19
 
 require (
 	github.com/aquasecurity/libbpfgo v0.3.0-libbpf-0.8.0
-	github.com/asaskevich/govalidator v0.0.0-20210307081110-f21760c49a8d
-	github.com/aws/aws-sdk-go v1.44.37
+	github.com/asaskevich/govalidator/v11 v11.0.1
+	github.com/aws/aws-sdk-go v1.44.300
 	github.com/aybabtme/rgbterm v0.0.0-20170906152045-cc83f3b3ce59
 	github.com/blang/semver v3.5.1+incompatible
 	github.com/cespare/xxhash/v2 v2.2.0
-	github.com/cheggaaa/pb/v3 v3.0.5
+	github.com/cheggaaa/pb/v3 v3.1.4
 	github.com/clarkduvall/hyperloglog v0.0.0-20171127014514-a0107a5d8004
 	github.com/davecgh/go-spew v1.1.1
-	github.com/dgraph-io/badger/v2 v2.2007.2
-	github.com/fatih/color v1.13.0
-	github.com/felixge/fgprof v0.9.1
-	github.com/fsnotify/fsnotify v1.5.4
-	github.com/go-gormigrate/gormigrate/v2 v2.0.0
-	github.com/golang-jwt/jwt v3.2.1+incompatible
+	github.com/dgraph-io/badger/v4 v4.1.0
+	github.com/fatih/color v1.15.0
+	github.com/felixge/fgprof v0.9.3
+	github.com/fsnotify/fsnotify v1.6.0
+	github.com/go-gormigrate/gormigrate/v2 v2.1.0
+	github.com/golang-jwt/jwt v3.2.2+incompatible
 	github.com/golang/mock v1.6.0
-	github.com/golang/protobuf v1.5.2
-	github.com/google/go-jsonnet v0.17.0
-	github.com/google/pprof v0.0.0-20221118152302-e6195bd50e26
+	github.com/golang/protobuf v1.5.3
+	github.com/google/go-jsonnet v0.20.0
+	github.com/google/pprof 200ffdc848b8
 	github.com/google/uuid v1.3.0
 	github.com/gorilla/handlers v1.5.1
 	github.com/gorilla/mux v1.8.0
-	github.com/grafana/regexp v0.0.0-20220304095617-2e8d9baf4ac2
-	github.com/hashicorp/consul/api v1.18.0
+	github.com/grafana/regexp 6b5c0a4cb7fd
+	github.com/hashicorp/consul/api v1.22.0
 	github.com/hashicorp/go-multierror v1.1.1
-	github.com/hashicorp/golang-lru v0.5.4
-	github.com/iancoleman/strcase v0.2.0
-	github.com/imdario/mergo v0.3.12
+	github.com/hashicorp/golang-lru/v2 v2.0.4
+	github.com/iancoleman/strcase v0.3.0
+	github.com/imdario/mergo v1.0.0
 	github.com/johejo/go-content-encoding v0.0.0-20220721183050-9ea4a7717479
-	github.com/josephspurrier/goversioninfo v1.2.0
-	github.com/jsonnet-bundler/jsonnet-bundler v0.4.0
-	github.com/kardianos/service v1.2.0
-	github.com/kisielk/godepgraph v0.0.0-20190626013829-57a7e4a651a9
-	github.com/klauspost/compress v1.15.9
-	github.com/kyoh86/richgo v0.3.3
-	github.com/mattn/goreman v0.3.5
-	github.com/mgechev/revive v1.0.3
+	github.com/josephspurrier/goversioninfo v1.4.0
+	github.com/jsonnet-bundler/jsonnet-bundler v0.5.1
+	github.com/kardianos/service v1.2.2
+	github.com/kisielk/godepgraph 2d0831789458
+	github.com/klauspost/compress v1.16.7
+	github.com/kyoh86/richgo v0.3.12
+	github.com/mattn/goreman v0.3.15
+	github.com/mgechev/revive v1.3.2
 	github.com/mitchellh/go-ps v1.0.0
-	github.com/mitchellh/mapstructure v1.4.3
+	github.com/mitchellh/mapstructure v1.5.0
 	github.com/mwitkow/go-conntrack v0.0.0-20190716064945-2f068394615f
-	github.com/onsi/ginkgo/v2 v2.1.3
-	github.com/onsi/gomega v1.17.0
+	github.com/onsi/ginkgo/v2 v2.11.0
+	github.com/onsi/gomega v1.27.8
 	github.com/pkg/errors v0.9.1
-	github.com/prometheus/client_golang v1.12.2
-	github.com/prometheus/common v0.34.0
-	github.com/pyroscope-io/client v0.6.1-0.20230130114945-a64d920d2fba
+	github.com/prometheus/client_golang v1.16.0
+	github.com/prometheus/common v0.44.0
+	github.com/pyroscope-io/client v0.7.1
 	github.com/pyroscope-io/dotnetdiag v1.2.1
 	github.com/pyroscope-io/goldga v0.4.2-0.20220218190441-817afcc3a7f1
 	github.com/pyroscope-io/jfr-parser v0.6.0
 	github.com/rlmcpherson/s3gof3r v0.5.0
-	github.com/shirou/gopsutil v3.21.4+incompatible
-	github.com/sirupsen/logrus v1.8.1
-	github.com/slok/go-http-metrics v0.9.0
-	github.com/spf13/cobra v1.2.1
+	github.com/shirou/gopsutil v3.21.11+incompatible
+	github.com/sirupsen/logrus v1.9.3
+	github.com/slok/go-http-metrics v0.10.0
+	github.com/spf13/cobra v1.7.0
 	github.com/spf13/pflag v1.0.5
-	github.com/spf13/viper v1.8.1
-	github.com/stretchr/testify v1.7.1
-	github.com/twmb/murmur3 v1.1.5
+	github.com/spf13/viper v1.16.0
+	github.com/stretchr/testify v1.8.4
+	github.com/twmb/murmur3 v1.1.8
 	github.com/valyala/bytebufferpool v1.0.0
-	golang.org/x/crypto v0.1.0
-	golang.org/x/exp v0.0.0-20230213192124-5e25df0256eb
-	golang.org/x/net v0.1.0
-	golang.org/x/oauth2 v0.0.0-20220411215720-9780585627b5
-	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
-	golang.org/x/sys v0.1.0
-	golang.org/x/text v0.4.0
-	golang.org/x/tools v0.2.0
-	google.golang.org/protobuf v1.28.0
-	gopkg.in/yaml.v2 v2.4.0
-	gorm.io/driver/sqlite v1.2.6
-	gorm.io/gorm v1.22.4
-	honnef.co/go/tools v0.0.1-2020.1.6
-	k8s.io/api v0.24.0
-	k8s.io/apimachinery v0.24.0
-	k8s.io/client-go v0.24.0
+	golang.org/x/crypto v0.11.0
+	golang.org/x/exp 613f0c0eb8a1
+	golang.org/x/net v0.12.0
+	golang.org/x/oauth2 v0.10.0
+	golang.org/x/sync v0.3.0
+	golang.org/x/sys v0.10.0
+	golang.org/x/text v0.11.0
+	golang.org/x/tools v0.11.0
+	google.golang.org/protobuf v1.31.0
+	gopkg.in/yaml.v3 v3.0.1
+	gorm.io/driver/sqlite v1.5.2
+	gorm.io/gorm v1.25.2
+	honnef.co/go/tools v0.4.3
+	k8s.io/api v0.27.3
+	k8s.io/apimachinery v0.27.3
+	k8s.io/client-go v0.27.3
 
 )
 

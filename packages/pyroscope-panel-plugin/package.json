@@ -8,8 +8,8 @@
     "dev": "webpack --config ../../scripts/webpack/webpack.panel.ts --watch"
   },
   "dependencies": {
-    "@grafana/data": "^8.3.1",
-    "@grafana/runtime": "^8.3.1",
+    "@grafana/data": "^10.0.0",
+    "@grafana/runtime": "^10.0.0",
     "@pyroscope/flamegraph": "^0.35.4"
   }
 }
